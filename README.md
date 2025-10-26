@@ -1,4 +1,4 @@
-<img width="833" height="687" alt="image" src="https://github.com/user-attachments/assets/9557795f-32e3-4fb1-934f-8a2bf5971fca" /># PA-KELOMPOK-C9-SISTEM-PENJUALAN-PULSA
+# PA-KELOMPOK-C9-SISTEM-PENJUALAN-PULSA
 Sistem Informasi - C - 2025
 
 **Sistem Penjualan Pulsa dan Internet**
@@ -36,7 +36,7 @@ Sistem Informasi - C - 2025
 
 **flowchart riwayat transaksi admin**
 
-<img width="833" height="215" alt="image" src="https://github.com/user-attachments/assets/01e0a2e2-88f4-4ae0-9a7e-b19ee12db549" />
+<img width="833" height="156" alt="image" src="https://github.com/user-attachments/assets/d8a4fb83-4418-41f9-834e-d8bfa6ce5da2" />
 
 **flowchart menu user**
 
