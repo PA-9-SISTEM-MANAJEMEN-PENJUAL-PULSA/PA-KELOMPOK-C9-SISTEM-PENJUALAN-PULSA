@@ -310,9 +310,9 @@ def urutkan_produk_interaktif(data):
     tampilkan_produk(data_sorted)
     return data_sorted
 
-# -----------------------------
+# --------------------------------------
 # Pilih ID Produk (untuk edit/hapus/beli)
-# -----------------------------
+# ---------------------------------------
 def pilih_id_produk(data, max_attempt=3):
     percobaan = 0
     while percobaan < max_attempt:
