@@ -525,75 +525,6 @@ def tampilkan_invoice(username, produk_row, harga, masa_aktif, waktu, no_hp="-")
     except (KeyboardInterrupt, EOFError):
         print("\n⚠️ Simpan struk dibatalkan.")
 
-
-# -----------------------------
-# Beli Produk + Update Saldo, Points, Level + Undo
-# -----------------------------
-def beli_produk(username):
-    data_produk = load_csv("data/data_produk.csv")
-    tampilkan_produk(data_produk)
-    produk_row = pilih_id_produk(data_produk)
-    if not produk_row:
-        return
-
-    users = load_csv("data/data_pengguna.csv")
-    user = next((u for u in users if u["username"] == username), None)
-    if not user:
-        print(Fore.RED + "❌ Akun tidak ditemukan!" + Style.RESET_ALL)
-        return
-
-    harga = int(produk_row.get("harga", 0))
-    masa_aktif = produk_row.get("masa_aktif", "0")
-    saldo_user = int(user.get("saldo", 0))
-
-    if saldo_user < harga:
-        print(Fore.RED + "❌ Saldo tidak cukup!" + Style.RESET_ALL)
-        return
-
-    # Input nomor HP untuk semua tipe produk
-    no_hp = ""
-    while True:
-        no_hp = input("📱 Masukkan nomor HP tujuan (9-15 digit): ").strip()
-        if no_hp.isdigit() and 9 <= len(no_hp) <= 15:
-            break
-        print(Fore.RED + "❌ Nomor HP harus berupa angka dan 9-15 digit!" + Style.RESET_ALL)
-
-    try:
-        confirm = input(f"❗ Konfirmasi beli '{produk_row['nama']}' seharga {format_rp(harga)}? (y/n): ").strip().lower()
-        if confirm != "y":
-            print(Fore.YELLOW + "⚠️ Transaksi dibatalkan." + Style.RESET_ALL)
-            return
-    except (KeyboardInterrupt, EOFError):
-        print(Fore.YELLOW + "\n⚠️ Transaksi dibatalkan." + Style.RESET_ALL)
-        return
-
-    waktu = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    transaksi = {
-        "username": username,
-        "nama_produk": produk_row.get("nama"),
-        "tipe": produk_row.get("tipe"),
-        "harga": str(harga),
-        "masa_aktif": masa_aktif,
-        "waktu": waktu,
-        "no_hp": no_hp
-    }
-
-    # Update saldo, points, level
-    user["saldo"] = str(saldo_user - harga)
-    user["points"] = str(int(user.get("points", 0)) + 10)
-    user["level"] = hitung_level(user.get("points", 0))
-    save_csv("data/data_pengguna.csv", users, headers_user)
-
-    # Simpan transaksi
-    data_transaksi = load_csv("data/riwayat_transaksi.csv")
-    data_transaksi.append(transaksi)
-    save_csv("data/riwayat_transaksi.csv", data_transaksi, headers_transaksi)
-
-    # Tampilkan invoice
-    tampilkan_invoice(username, produk_row, harga, masa_aktif, waktu, no_hp=no_hp)
-
-    print(Fore.GREEN + f"✅ Saldo sekarang: {format_rp(user['saldo'])} | Points: {user['points']} | Level: {user['level']}" + Style.RESET_ALL)
-
 # --------------------------------------
 # Lihat Semua Riwayat Transaksi (Admin)
 # --------------------------------------
@@ -728,6 +659,7 @@ def beli_produk(username):
 
     print(Fore.GREEN + f"✅ Saldo sekarang: {format_rp(user['saldo'])} | Points: {user['points']} | Level: {user['level']}" + Style.RESET_ALL)
     print(Fore.GREEN + "✅ Transaksi berhasil! Terima kasih telah membeli." + Style.RESET_ALL)
+    
 #-------------------
 # Reminder harian
 #-------------------
