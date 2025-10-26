@@ -1,0 +1,6 @@
+id,nama,tipe,harga,masa_aktif
+001,Paket Internet 5GB,Internet,20000,5
+002,Paket Internet 10GB,Internet,30000,10
+003,Pulsa 25000,Pulsa,25000,0
+004,Pulsa 50000,Pulsa,50000,0
+005,Paket Unlimited 1 Hari,Internet,10000,1
