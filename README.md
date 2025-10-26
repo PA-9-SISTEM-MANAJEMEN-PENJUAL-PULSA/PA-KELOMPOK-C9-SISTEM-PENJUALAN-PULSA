@@ -10,10 +10,15 @@ Sistem Informasi - C - 2025
 
 # Flowchart
 <img width="833" height="714" alt="image" src="https://github.com/user-attachments/assets/69e38038-cda1-4330-aa27-599904345ee4" />
+
 **flowchart menu utama**
+
 <img width="833" height="150" alt="image" src="https://github.com/user-attachments/assets/c532ef85-16c9-4f43-81e7-e4d5044d7dcf" />
+
 **flowchart menuu admin**
+
 <img width="833" height="681" alt="image" src="https://github.com/user-attachments/assets/00900d5e-43ef-4af8-ae6d-b737d26bb237" />
+
 **flowchart lihat produk admin**
 
 
