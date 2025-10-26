@@ -58,6 +58,20 @@ Sistem Informasi - C - 2025
 
 <img width="768" height="169" alt="image" src="https://github.com/user-attachments/assets/5adb9980-7bbe-4acd-a2aa-8e66a270974f" />
 
+# Menu Login atau Register Akun
+
+<img width="692" height="157" alt="image" src="https://github.com/user-attachments/assets/7e3e7485-3dbb-48d5-98c2-9e725912ae07" />
+
+Pada awal program, akan ditampilkan menu utama dengan melakukan login atau register atau keluar program.
+
+  * Jika menginputkan angka selain 1 sampai 3
+
+    <img width="661" height="171" alt="image" src="https://github.com/user-attachments/assets/36c96017-63b3-496a-b4c7-d9abdfe3e7e7" />
+
+
+
+
+
 
 
 
