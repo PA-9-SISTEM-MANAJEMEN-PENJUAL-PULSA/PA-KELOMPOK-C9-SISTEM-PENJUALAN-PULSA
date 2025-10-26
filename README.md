@@ -68,6 +68,32 @@ Pada awal program, akan ditampilkan menu utama dengan melakukan login atau regis
 
     <img width="661" height="171" alt="image" src="https://github.com/user-attachments/assets/36c96017-63b3-496a-b4c7-d9abdfe3e7e7" />
 
+    maka outputnya tidak valid.
+
+**1. Login (jika sudah memiliki akun)**
+  * jika username benar dan sebagai admin, maka akan menampilkan menu admin seperti pada gambar dibawah.
+  
+  <img width="654" height="234" alt="image" src="https://github.com/user-attachments/assets/863a89f8-520b-4c53-a00e-92682290aa23" />
+
+  * jika username benar dan sebagai user, maka akan menampilkan menu user pada gambar dibawah.
+
+    <img width="677" height="521" alt="image" src="https://github.com/user-attachments/assets/5c0540b1-bcad-442c-a27d-1a37a01bbb4c" />
+
+  * jika username atau password salah.
+
+    <img width="631" height="191" alt="image" src="https://github.com/user-attachments/assets/d7dd0897-70f3-4d8f-9346-dd570d291481" />
+
+**2. Register**
+  * melakukan register untuk yang belum punya akun.
+
+
+
+
+  
+
+
+
+
 
 
 
